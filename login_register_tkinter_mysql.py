@@ -2,7 +2,6 @@ import pymysql
 import tkinter as tk
 from tkinter import *
 from tkinter import messagebox
-from setuptools import Command
 
 
 w = tk.Tk()
@@ -18,7 +17,6 @@ connection = pymysql.connect(
 cursor = connection.cursor()
 
 
-
 def button1():
 
     if entry1.get() != '' and entry2.get() != ''and entry3.get() != '':
@@ -30,9 +28,9 @@ def button1():
     else:
         messagebox.showerror('Information', 'The line is empty')
         
-
-       
+        
 def button2():
+  
     login = e1.get()
     password =e2.get()
     y = cursor.execute("SELECT login,password FROM usersreg WHERE login = %s AND password = %s ", (login,password)) 
@@ -42,6 +40,7 @@ def button2():
     else:
         messagebox.showerror('Information', 'You not lig in')
 
+        
 f1 = tk.Frame(master=w, width=300, height=750, bg='blue')
 f1.pack(fill=tk.BOTH, side=tk.LEFT)
 
