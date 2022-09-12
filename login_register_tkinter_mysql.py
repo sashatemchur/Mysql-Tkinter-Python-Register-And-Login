@@ -88,5 +88,3 @@ b2.grid(sticky=tk.N, pady=15)
 w.mainloop()
 
 cursor.close()
-#cursor.execute = 'SELECT login, password FROM usersreg  ("{}", "{}") '.format(e1.get(), e2.get())
-        #
